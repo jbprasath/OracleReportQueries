@@ -1,4 +1,12 @@
 
+ As SYS user:
+
+    CREATE OR REPLACE DIRECTORY TEST_DIR AS '\tmp\myfiles'
+    /
+    GRANT READ, WRITE ON DIRECTORY TEST_DIR TO myuser
+    /
+    As user:
+
 CREATE OR REPLACE PROCEDURE run_query(p_sql IN VARCHAR2
                                      ,p_dir IN VARCHAR2
                                      ,p_file IN VARCHAR2
